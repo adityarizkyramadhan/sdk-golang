@@ -3,11 +3,8 @@
 <strong>Created by :</strong>
 
 Aditya Rizky Ramadhan
-
 Teknik Informatika
-
 Fakultas Ilmu Komputer
-
 Universitas Brawijaya
 
 <strong>Tujuan : </strong> <br>
