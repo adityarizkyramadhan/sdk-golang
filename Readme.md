@@ -2,10 +2,10 @@
 
 <strong>Created by :</strong>
 
-Aditya Rizky Ramadhan
-Teknik Informatika
-Fakultas Ilmu Komputer
-Universitas Brawijaya
+Aditya Rizky Ramadhan <br>
+Teknik Informatika <br>
+Fakultas Ilmu Komputer <br>
+Universitas Brawijaya <br>
 
 <strong>Tujuan : </strong> <br>
 <ol>
