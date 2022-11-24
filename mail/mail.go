@@ -6,28 +6,6 @@ import (
 	"strings"
 )
 
-// const (
-// 	CONFIG_SMTP_HOST     = "smtp.gmail.com"
-// 	CONFIG_SMTP_PORT     = 587
-// 	CONFIG_SENDER_NAME   = "Aditya Rizky Ramadhan <emailer2311@gmail.com>"
-// 	CONFIG_AUTH_EMAIL    = "emailer2311@gmail.com"
-// 	CONFIG_AUTH_PASSWORD = "jokgjhacdiqxjboo"
-// )
-
-// func main() {
-// 	to := []string{"adityarizky2040@gmail.com"}
-// 	cc := []string{"adityarizky1020@gmail.com"}
-// 	subject := "Test mail"
-// 	message := "WKOKOWKOKWOK BILANG SAYA KLO MASUK"
-
-// 	err := sendMail(to, cc, subject, message)
-// 	if err != nil {
-// 		log.Fatal(err.Error())
-// 	}
-
-// 	log.Println("Mail sent!")
-// }
-
 type mailer struct {
 	SmtpHost   string
 	SmtpPort   int
