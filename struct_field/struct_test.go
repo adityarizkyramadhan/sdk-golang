@@ -1,6 +1,7 @@
 package struct_field_test
 
 import (
+	"fmt"
 	"testing"
 
 	sf "github.com/adityarizkyramadhan/sdk-golang/struct_field"
@@ -46,7 +47,14 @@ func Test_Method_Dua(t *testing.T) {
 			assert.True(t, ok)
 			tagName := structField.GetStructTag(field, "field_tag")
 			assert.Equal(t, "nama", tagName, tagName)
-
 		})
 	}
+}
+
+func Test_Name(t *testing.T) {
+	mhs := new(Mahasiswa)
+
+	structField := sf.NewGetTagByField(mhs)
+	arr := structField.ToArray()
+	fmt.Println(arr)
 }
