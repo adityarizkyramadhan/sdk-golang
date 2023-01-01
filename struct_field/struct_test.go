@@ -11,6 +11,7 @@ import (
 type Mahasiswa struct {
 	Nama string `field_tag:"nama"`
 	Umur int    `field_tag:"umur"`
+	Nim  string `field_tag:"nim"`
 }
 
 func Test_Method_Satu(t *testing.T) {
@@ -51,10 +52,30 @@ func Test_Method_Dua(t *testing.T) {
 	}
 }
 
-func Test_Name(t *testing.T) {
+func Test_Array(t *testing.T) {
 	mhs := new(Mahasiswa)
 
 	structField := sf.NewGetTagByField(mhs)
 	arr := structField.ToArray()
 	fmt.Println(arr)
+}
+
+func Test_To_String(t *testing.T) {
+	mhs := new(Mahasiswa)
+
+	structField := sf.NewGetTagByField(mhs)
+	str := structField.ToString()
+	fmt.Println(str)
+}
+
+func Test_Type_Data(t *testing.T) {
+	mhs := new(Mahasiswa)
+
+	structField := sf.NewGetTagByField(mhs)
+
+	data := structField.GetFieldNameAndType()
+
+	for _, v := range structField.ToArray() {
+		fmt.Println(data[v])
+	}
 }

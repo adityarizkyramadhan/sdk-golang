@@ -40,3 +40,23 @@ func (f *FieldTag) ToArray() []string {
 	}
 	return data
 }
+
+func (f *FieldTag) ToString() string {
+	data := ""
+	for i, v := range f.ToArray() {
+		data += v
+		if i == len(f.ToArray())-1 {
+			break
+		}
+		data += ", "
+	}
+	return data
+}
+
+func (f *FieldTag) GetFieldNameAndType() map[string]interface{} {
+	data := make(map[string]interface{})
+	for i, v := range f.ToArray() {
+		data[v] = f.GetByIndex(i).Type.String()
+	}
+	return data
+}
