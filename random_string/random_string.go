@@ -8,6 +8,7 @@ import (
 
 var (
 	errNegativeLength = errors.New("length must be positive")
+	errEmptyCharset   = errors.New("empty charset")
 	seedRand          = rand.New(rand.NewSource(time.Now().Unix()))
 )
 
@@ -30,6 +31,9 @@ func New(charset string) *StringRandom {
 func (s *StringRandom) Generate(length int) (string, error) {
 	if length < 0 {
 		return "", errNegativeLength
+	}
+	if len(s.charset) == 0 {
+		return "", errEmptyCharset
 	}
 	random := make([]byte, length)
 	for i := range random {
